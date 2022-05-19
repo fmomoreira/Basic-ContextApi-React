@@ -1,3 +1,15 @@
+button{
+  width: 35px;
+  height: 35px;
+  background-color: #282c34;
+  color: #61dafb;
+  margin: 10px;
+}
+
+.buttonContext{
+  display: flex;
+}
+
 .App {
   text-align: center;
 }

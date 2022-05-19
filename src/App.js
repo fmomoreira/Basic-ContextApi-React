@@ -1,22 +1,35 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
+import { CounterContext } from './Counter'
 
-function App() {
+ function App() {
+
+  const { counter, setCounter } = useContext(CounterContext);
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+       <h1>{counter}</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="Context Api"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Context Api
         </a>
+        <div className="buttonContext">
+        <button
+            onClick={() => {setCounter(counter - 1)}}
+          >-</button>
+          <button
+            onClick={() => {setCounter(counter + 1)}}
+          >+</button>
+        </div>
       </header>
     </div>
   );
